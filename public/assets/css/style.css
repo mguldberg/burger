@@ -1,0 +1,33 @@
+/**
+ * project - full Stack App - style.css
+ **/
+
+/* make text stand out against black background */
+h1,
+h4 {
+    font-size: 12px;
+    text-shadow: 
+        -1px 0 black,
+        0 1px black,
+        1px 0 black,
+        0 -1px black;
+}
+
+span {
+    font-size: 58px;
+   border-right: 3px;
+   border-color: orange;
+}
+
+
+
+/* handled small screen size (all phones in the google dev tools) so the navbar button will stay on the same line
+as my name in the title */
+
+@media screen and (max-width: 414px){
+    #nametitle,
+    #aboutmetitle,
+    h3.panel-title {
+    font-size: 17px;
+
+}
