@@ -1,4 +1,4 @@
-//Winning music
+//Fun sounder for each page load - from Pulp Fiction - S. L Jackson
 var audioWinning = document.createElement("audio");
 audioWinning.setAttribute("src", "assets/img/tasty_burger.wav");
 
@@ -6,6 +6,8 @@ audioWinning.play();
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
+
+    //handle Devoured button click - will move button to the other side of the screen once the DB is updated
     $(".devoured-button").on("click", function (event) {
         var id = $(this).attr("burger-id");
         console.log($(this).attr("burger-id"));
@@ -26,6 +28,7 @@ $(function () {
             });
     });
 
+    //add new burger handler
     $(".create-burger-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
@@ -47,18 +50,4 @@ $(function () {
             );
     });
 
-    //   $(".delete-cat").on("click", function(event) {
-    //     var id = $(this).data("id");
-
-    //     // Send the DELETE request.
-    //     $.ajax("/api/cats/" + id, {
-    //       type: "DELETE"
-    //     }).then(
-    //       function() {
-    //         console.log("deleted cat", id);
-    //         // Reload the page to get the updated list
-    //         location.reload();
-    //       }
-    //     );
-    //   });
 });
